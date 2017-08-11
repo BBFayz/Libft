@@ -6,21 +6,18 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 18:35:14 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/20 18:30:52 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/11 03:23:26 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
 	size_t len;
 
 	len = 0;
-	while (*s)
-	{
+	while (*(s++))
 		len++;
-		s++;
-	}
 	return (len);
 }

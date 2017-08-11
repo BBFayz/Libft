@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 11:26:13 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/31 22:29:48 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/11 05:13:11 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdlib.h>
 
 void			*ft_memset(void *b, int c, size_t len);
-void			*ft_bzero(void *s, size_t n);
+void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memccpy(void *dst, const void *src, int c,
 size_t n);

@@ -6,36 +6,20 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 18:44:02 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/20 18:42:44 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/11 03:41:16 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strdup(const char *s1)
 {
-	size_t		len;
-	char		*new;
-	const char	*tmp;
+	size_t	len;
+	char	*new;
 
-	tmp = s1;
-	len = 0;
-	while (*s1)
-	{
-		len++;
-		s1++;
-	}
-	new = malloc(len + 1);
-	if (new == NULL)
+	len = ft_strlen(s1);
+	if ((new = (char *)malloc(len + 1)) == NULL)
 		return (NULL);
-	s1 = tmp;
-	while (*s1)
-	{
-		*new = *s1;
-		s1++;
-		new++;
-	}
-	*new = '\0';
-	return (new - len);
+	ft_strcpy(new, s1);
+	return (new);
 }

@@ -6,23 +6,13 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 18:24:30 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/19 15:35:38 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/11 02:05:28 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *cur;
-
-	if (n == 0)
-		return ;
-	cur = (char *)s;
-	while (n--)
-	{
-		*cur = 0;
-		if (n)
-			cur++;
-	}
+	ft_memset(s, 0, n);
 }

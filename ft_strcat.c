@@ -6,9 +6,11 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 20:00:26 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/07 04:06:29 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/11 05:13:05 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {
@@ -18,11 +20,7 @@ char	*ft_strcat(char *s1, const char *s2)
 	while (*mem)
 		mem++;
 	while (*s2)
-	{
-		*mem = *s2;
-		s2++;
-		mem++;
-	}
+		*(mem++) = *(s2++);
 	*mem = '\0';
 	return (s1);
 }
