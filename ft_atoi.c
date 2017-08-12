@@ -6,9 +6,11 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 13:54:15 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/12 04:52:18 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/12 04:57:31 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

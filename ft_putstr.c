@@ -6,19 +6,14 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:32:48 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/27 21:41:24 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/12 04:57:19 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {
-	if (s == NULL)
-		return ;
 	while (*s)
-	{
-		write(1, s, 1);
-		s++;
-	}
+		write(1, s++, 1);
 }

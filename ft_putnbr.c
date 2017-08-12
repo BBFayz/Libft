@@ -6,11 +6,11 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:39:20 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/29 13:19:42 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/12 04:58:51 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 static int	ft_putnbr2(int n)
 {
