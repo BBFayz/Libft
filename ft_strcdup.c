@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strcdup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/29 16:58:41 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/30 18:52:02 by azybert          ###   ########.fr       */
+/*   Created: 2017/08/18 02:11:34 by azybert           #+#    #+#             */
+/*   Updated: 2017/08/18 02:18:59 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(const void *content, size_t content_size)
+char	*ft_strcdup(char *f, char *s)
 {
-	t_list	*new;
+	char	*new;
+	char	*mem;
 
-	new = NULL;
-	if ((new = (t_list*)ft_memalloc(sizeof(t_list))))
-	{
-		if (content)
-		{
-			new->content = ft_memalloc(content_size);
-			if (!new->content)
-				return (NULL);
-			ft_memcpy(new->content, content, content_size);
-			new->content_size = content_size;
-		}
-		else
-		{
-			new->content = NULL;
-			new->content_size = 0;
-		}
-		new->next = NULL;
-	}
+	if (!(new = malloc(sizeof(char *) * (ft_strlen(f) + ft_strlen(s) + 1))))
+		return (NULL);
+	mem = new;
+	while (*f)
+		*(mem++) = *(f++);
+	while (*s)
+		*(mem++) = *(s++);
+	*mem = '\0';
 	return (new);
 }
