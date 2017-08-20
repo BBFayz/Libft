@@ -6,7 +6,7 @@
 #    By: azybert <azybert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 19:33:52 by azybert           #+#    #+#              #
-#    Updated: 2017/08/18 02:21:27 by azybert          ###   ########.fr        #
+#    Updated: 2017/08/20 20:53:50 by azybert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ FILES = ft_memset.c \
 		ft_strcdup.c \
 
 OBJ = $(FILES:.c=.o)
-FLAG = -Wall -Wextra -Werror
+FLAG = -Wall -Wextra -Werror -Iincludes
 
 all: $(NAME)
 
