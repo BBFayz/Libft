@@ -6,11 +6,11 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:30:39 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/27 21:22:54 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/21 05:47:09 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <libft.h>
 
 void	ft_putchar(char c)
 {

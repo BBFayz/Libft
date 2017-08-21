@@ -6,13 +6,15 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 11:32:02 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/19 18:40:54 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/21 05:52:59 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isdigit(int c)
 {
-	if (c >= 48 && c <= 57)
+	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }

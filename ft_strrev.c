@@ -6,31 +6,21 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/31 16:12:33 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/09 22:46:02 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/21 03:59:04 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strrev(char const *s, unsigned int start, size_t len)
+char	*ft_strduprev(char const *s, unsigned int start, size_t len)
 {
-	char	*mem;
-	char	*tmp;
+	int		indice;
+	char	mem;
 
-	if (s == NULL)
-		return (NULL);
-	mem = (char *)malloc(len + 1);
-	if (mem == NULL)
-		return (NULL);
-	s = s + start + len;
-	tmp = mem;
-	while (len--)
+	k = 0;
+	while (*(s + len - k) > *(s + k))
 	{
-		*tmp = *s;
-		tmp++;
-		s--;
+
 	}
-	*tmp = '\0';
 	return (mem);
 }

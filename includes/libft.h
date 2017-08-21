@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 11:26:13 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/20 20:42:40 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/21 03:59:36 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char const *s, int fd);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
-char			ft_strrev(char const *s, unsigned int start, size_t len);
+char			ft_strduprev(char const *s, unsigned int start, size_t len);
 char			*ft_realloc(char *to_realloc, size_t new_size);
 char			*ft_strcdup(char *f, char *s);
 
