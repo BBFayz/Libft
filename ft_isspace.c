@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/15 13:54:15 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/21 06:10:59 by azybert          ###   ########.fr       */
+/*   Created: 2017/08/21 06:01:10 by azybert           #+#    #+#             */
+/*   Updated: 2017/08/21 06:03:58 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_isspace(int c)
 {
-	int	num;
-
-	num = 0;
-	str = ft_avoidspace(str);
-	if ((*str >= 48 && *str <= 57) || *str == '+' || *str == '-')
-	{
-		if (*str == '-')
-		{
-			str++;
-			while (*str && *str >= 48 && *str <= 57)
-				num = num * 10 - (*(str++) - 48);
-		}
-		else
-		{
-			if (*str == '+')
-				str++;
-			while (*str && *str >= 48 && *str <= 57)
-				num = num * 10 + (*(str++) - 48);
-		}
-	}
-	return (num);
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r' ||
+			c == ' ')
+		return (1);
+	return (0);
 }

@@ -1,38 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_avoidspace.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/15 13:54:15 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/21 06:10:59 by azybert          ###   ########.fr       */
+/*   Created: 2017/08/21 06:07:10 by azybert           #+#    #+#             */
+/*   Updated: 2017/08/21 06:10:31 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+char	*ft_avoidspace(char *str)
 {
-	int	num;
-
-	num = 0;
-	str = ft_avoidspace(str);
-	if ((*str >= 48 && *str <= 57) || *str == '+' || *str == '-')
-	{
-		if (*str == '-')
-		{
-			str++;
-			while (*str && *str >= 48 && *str <= 57)
-				num = num * 10 - (*(str++) - 48);
-		}
-		else
-		{
-			if (*str == '+')
-				str++;
-			while (*str && *str >= 48 && *str <= 57)
-				num = num * 10 + (*(str++) - 48);
-		}
-	}
-	return (num);
+	while (ft_isspace(str) == 1)
+		str++;
+	return (str);
 }
