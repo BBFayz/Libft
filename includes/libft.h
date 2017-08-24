@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 11:26:13 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/24 02:48:19 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/24 02:57:35 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dst, const char *src);
 void			ft_strdel(char **as);
 char			*ft_strdup(const char *s1);
-char			*ft_strdup_cpy(char *f, char *s);
 int				ft_strequ(char const *s1, char const *s2);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));

@@ -6,7 +6,7 @@
 #    By: azybert <azybert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 19:33:52 by azybert           #+#    #+#              #
-#    Updated: 2017/08/24 01:18:55 by azybert          ###   ########.fr        #
+#    Updated: 2017/08/24 02:58:17 by azybert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,6 @@ FILES = ft_atoi.c \
 		ft_strcpy.c \
 		ft_strdel.c \
 		ft_strdup.c \
-		ft_strdup_cpy.c \
 		ft_strequ.c \
 		ft_striter.c \
 		ft_striteri.c \
