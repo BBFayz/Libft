@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/21 06:07:10 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/21 06:10:31 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/24 01:19:29 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_avoidspace(char *str)
 {
-	while (ft_isspace(str) == 1)
+	while (ft_isspace((int)str) == 1)
 		str++;
 	return (str);
 }

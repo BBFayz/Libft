@@ -6,15 +6,13 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 11:43:21 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/21 05:53:02 by azybert          ###   ########.fr       */
+/*   Updated: 2017/01/30 15:47:52 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 int	ft_isalnum(int c)
 {
-	if ((ft_isalpha(c) == 1) && (ft_isdigit(c) == 1))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122) || (c >= 48 && c <= 57))
 		return (1);
 	return (0);
 }
