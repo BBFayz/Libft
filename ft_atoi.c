@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 13:54:15 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/24 01:57:32 by azybert          ###   ########.fr       */
+/*   Updated: 2017/08/24 03:03:05 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int	ft_atoi(const char *str)
 	int	num;
 
 	num = 0;
-	str = ft_avoidspace((char *)str);
+	while (ft_isspace(*str) == 1)
+		str++;
 	if ((*str >= '0' && *str <= '9') || *str == '+' || *str == '-')
 	{
 		if (*str == '-')

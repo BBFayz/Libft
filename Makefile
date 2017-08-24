@@ -6,13 +6,12 @@
 #    By: azybert <azybert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 19:33:52 by azybert           #+#    #+#              #
-#    Updated: 2017/08/24 02:58:17 by azybert          ###   ########.fr        #
+#    Updated: 2017/08/24 03:11:57 by azybert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FILES = ft_atoi.c \
-		ft_avoidspace.c \
 		ft_bzero.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
