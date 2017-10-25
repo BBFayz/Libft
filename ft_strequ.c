@@ -6,9 +6,11 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 15:48:08 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/29 15:13:48 by azybert          ###   ########.fr       */
+/*   Updated: 2017/10/25 08:37:52 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strequ(char const *s1, char const *s2)
 {

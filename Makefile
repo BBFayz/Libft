@@ -6,7 +6,7 @@
 #    By: azybert <azybert@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/08 19:33:52 by azybert           #+#    #+#              #
-#    Updated: 2017/08/24 03:21:59 by azybert          ###   ########.fr        #
+#    Updated: 2017/10/25 08:54:24 by azybert          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ FILES = ft_atoi.c \
 		ft_striter.c \
 		ft_striteri.c \
 		ft_strjoin.c \
+		ft_strcjoin.c \
 		ft_strlcat.c \
 		ft_strlen.c \
 		ft_strmap.c \
@@ -66,6 +67,7 @@ FILES = ft_atoi.c \
 		ft_strtrim.c \
 		ft_tolower.c \
 		ft_toupper.c \
+		get_next_line.c \
 
 OBJ = $(FILES:.c=.o)
 FLAG = -Wall -Wextra -Werror -Iincludes

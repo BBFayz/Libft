@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:32:48 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/12 04:57:19 by azybert          ###   ########.fr       */
+/*   Updated: 2017/10/25 08:15:28 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 void	ft_putstr(char const *s)
 {
-	while (*s)
-		write(1, s++, 1);
+		write(1, s, ft_strlen(s));
 }

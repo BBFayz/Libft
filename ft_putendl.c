@@ -6,23 +6,15 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:32:48 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/30 15:25:19 by azybert          ###   ########.fr       */
+/*   Updated: 2017/10/25 08:09:53 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void	ft_putendl(char const *s)
 {
-	if (s == NULL)
-	{
-		write(1, "\n", 1);
-		return ;
-	}
-	while (*s)
-	{
-		write(1, s, 1);
-		s++;
-	}
+	if (s != NULL)
+		write(1, s, ft_strlen(s));
 	write(1, "\n", 1);
 }

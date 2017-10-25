@@ -1,21 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/17 14:16:40 by azybert           #+#    #+#             */
-/*   Updated: 2017/10/25 08:40:36 by azybert          ###   ########.fr       */
+/*   Created: 2017/08/16 12:30:30 by azybert           #+#    #+#             */
+/*   Updated: 2017/10/21 01:36:27 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void	ft_striter(char *s, void (*f)(char *))
+# include <fcntl.h>
+# include "libft.h"
+# define BUFF_SIZE 256
+
+typedef struct	s_node
 {
-	if (!f || !s)
-		return ;
-	while (*s)
-		f(s++);
-}
+	int				fd;
+	int				to_read;
+	int				ended;
+	char			*next_line;
+	struct s_node	*next;
+}				t_node;
+
+typedef struct	s_list
+{
+	struct s_node	*first;
+}				t_list;
+
+int				get_next_line(const int fd, char **line);
+
+#endif

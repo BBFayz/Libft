@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striter.c                                       :+:      :+:    :+:   */
+/*   ft_strcjoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/17 14:16:40 by azybert           #+#    #+#             */
-/*   Updated: 2017/10/25 08:40:36 by azybert          ###   ########.fr       */
+/*   Created: 2017/10/25 08:48:51 by azybert           #+#    #+#             */
+/*   Updated: 2017/10/25 08:58:21 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striter(char *s, void (*f)(char *))
+char    *ft_strcjoin(char const *name1, char const *name2, char c)
 {
-	if (!f || !s)
-		return ;
-	while (*s)
-		f(s++);
+	char    *mem;
+
+	if (!(mem = malloc(sizeof(char) *
+					(ft_strlen(name1) + ft_strlen(name2) + 2))))
+		return (NULL);
+	ft_strcpy(mem, name1);
+	ft_strcat(mem, &c);
+	ft_strcat(mem, name2);
+	return (mem);
 }
