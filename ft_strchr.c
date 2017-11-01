@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 21:09:03 by azybert           #+#    #+#             */
-/*   Updated: 2017/10/25 08:25:28 by azybert          ###   ########.fr       */
+/*   Updated: 2017/11/01 02:22:38 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*mem;
-
-	mem = (char *)(s - 1);
-	while (*(++mem))
-		if (*mem == (char)c)
-			return (mem);
+	while (*(s))
+		if (*s++ == (char)c)
+			return ((char *)s - 1);
 	if ((char)c == '\0')
-		return (mem);
+		return ((char *)s);
 	return (NULL);
 }
