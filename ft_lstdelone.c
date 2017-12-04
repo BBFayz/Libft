@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/15 12:54:25 by azybert           #+#    #+#             */
-/*   Updated: 2017/12/04 04:41:58 by azybert          ###   ########.fr       */
+/*   Created: 2017/01/30 12:34:08 by azybert           #+#    #+#             */
+/*   Updated: 2017/01/30 18:35:20 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	char	*mem;
-	char	*mem2;
-
-	if (*little == '\0')
-		return ((char *)big);
-	while (*big)
+	if (alst)
 	{
-		if (*little == *big)
-		{
-			mem = (char *)big;
-			mem2 = (char *)little;
-			while (*mem2 && *mem2 == *mem)
-			{
-				mem2++;
-				mem++;
-			}
-			if (*mem2 == '\0')
-				return ((char *)big);
-		}
-		big++;
+		del((*alst)->content, (*alst)->content_size);
+		free(*alst);
+		*alst = NULL;
 	}
-	return (NULL);
 }

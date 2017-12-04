@@ -6,11 +6,11 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 12:54:25 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/27 19:26:53 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/04 04:38:55 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char		*ft_strnstr(const char *big, const char *little, size_t len)
 {

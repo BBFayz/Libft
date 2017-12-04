@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/13 16:40:37 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/11 02:14:28 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/04 01:18:05 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	while (len--)
-		*(char *)(b + len) = (unsigned char)c;
+		*(char *)(b + len) = (char)c;
 	return (b);
 }

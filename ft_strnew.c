@@ -6,27 +6,18 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 13:54:39 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/21 15:53:16 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/04 05:13:15 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnew(size_t size)
 {
 	char *mem;
-	char *tmp;
 
-	mem = (char *)malloc(size + 1);
-	if (mem == NULL)
+	if (!(mem = (char *)malloc(size + 1)))
 		return (NULL);
-	tmp = mem;
-	while (size--)
-	{
-		*tmp = '\0';
-		tmp++;
-	}
-	*tmp = '\0';
+	ft_memset(mem, '\0', size);
 	return (mem);
 }

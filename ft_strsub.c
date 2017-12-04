@@ -6,31 +6,21 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 16:03:52 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/31 16:23:36 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/04 05:15:49 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*mem;
-	char	*tmp;
 
 	if (s == NULL)
 		return (NULL);
-	mem = (char *)malloc(len + 1);
-	if (mem == NULL)
+	if (!(mem = (char *)malloc(len + 1)))
 		return (NULL);
-	s = s + start;
-	tmp = mem;
-	while (len--)
-	{
-		*tmp = *s;
-		tmp++;
-		s++;
-	}
-	*tmp = '\0';
+	ft_strncpy(mem, s + start, len);
+	*(char *)(s + start + len - 1) = '\0';
 	return (mem);
 }

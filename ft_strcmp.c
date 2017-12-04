@@ -6,11 +6,9 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/15 13:45:32 by azybert           #+#    #+#             */
-/*   Updated: 2017/10/25 08:30:44 by azybert          ###   ########.fr       */
+/*   Updated: 2017/01/27 21:47:20 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:32:48 by azybert           #+#    #+#             */
-/*   Updated: 2017/10/25 08:09:53 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/04 01:25:39 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,5 @@
 
 void	ft_putendl(char const *s)
 {
-	if (s != NULL)
-		write(1, s, ft_strlen(s));
-	write(1, "\n", 1);
+	ft_putendl_fd(s, 1);
 }

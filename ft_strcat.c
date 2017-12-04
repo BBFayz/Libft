@@ -6,11 +6,9 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/14 20:00:26 by azybert           #+#    #+#             */
-/*   Updated: 2017/08/11 05:13:05 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/04 03:06:51 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcat(char *s1, const char *s2)
 {

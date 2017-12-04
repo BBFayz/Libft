@@ -6,18 +6,32 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:39:20 by azybert           #+#    #+#             */
-/*   Updated: 2017/10/25 08:56:34 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/04 03:02:17 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void		ft_putnbr_fd(int n, int fd)
 {
-	char	*nbr;
+	char	mem[12];
+	int		tmp;
+	size_t	i;
 
-	nbr = ft_itoa(n);
-	if (nbr != NULL)
-		write(fd, nbr, ft_strlen(nbr));
-	free(nbr);
+	i = 0;
+	if (n >= 0)
+		n = -n;
+	else
+		mem[i++] = '-';
+	tmp = -1;
+	while (n / 10 < tmp)
+		tmp *= 10;
+	while (tmp < 0)
+	{
+		mem[i++] = n / tmp + '0';
+		n = n - n / tmp * tmp;
+		tmp = tmp / 10;
+	}
+	mem[i] = '\0';
+	write(fd, mem, ft_strlen(mem));
 }

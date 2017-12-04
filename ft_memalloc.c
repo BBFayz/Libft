@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 13:21:02 by azybert           #+#    #+#             */
-/*   Updated: 2017/10/25 07:58:52 by azybert          ###   ########.fr       */
+/*   Updated: 2017/12/03 22:59:09 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	*ft_memalloc(size_t size)
 {
-	char *mem;
+	char	*mem;
 
-	mem = malloc(size);
-	if (mem == NULL)
+	if (!(mem = malloc(size)))
 		return (NULL);
 	ft_bzero(mem, size);
 	return (mem);

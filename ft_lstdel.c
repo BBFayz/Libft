@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/15 12:54:25 by azybert           #+#    #+#             */
-/*   Updated: 2017/12/04 04:41:58 by azybert          ###   ########.fr       */
+/*   Created: 2017/01/30 12:43:52 by azybert           #+#    #+#             */
+/*   Updated: 2017/11/25 00:09:27 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+void	ft_lstdel(t_list **alst, void (*del)(void*, size_t))
 {
-	char	*mem;
-	char	*mem2;
+	t_list *tmp;
+	t_list *lst;
 
-	if (*little == '\0')
-		return ((char *)big);
-	while (*big)
+	if (alst == NULL)
+		return ;
+	lst = *alst;
+	while (lst != NULL)
 	{
-		if (*little == *big)
-		{
-			mem = (char *)big;
-			mem2 = (char *)little;
-			while (*mem2 && *mem2 == *mem)
-			{
-				mem2++;
-				mem++;
-			}
-			if (*mem2 == '\0')
-				return ((char *)big);
-		}
-		big++;
+		tmp = lst->next;
+		ft_lstdelone(&lst, del);
+		lst = tmp;
 	}
-	return (NULL);
+	*alst = NULL;
 }
