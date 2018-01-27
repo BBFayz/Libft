@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 13:54:39 by azybert           #+#    #+#             */
-/*   Updated: 2017/12/04 05:13:15 by azybert          ###   ########.fr       */
+/*   Updated: 2018/01/27 22:46:14 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ char	*ft_strnew(size_t size)
 
 	if (!(mem = (char *)malloc(size + 1)))
 		return (NULL);
-	ft_memset(mem, '\0', size);
+	ft_memset(mem, '\0', size + 1);
 	return (mem);
 }

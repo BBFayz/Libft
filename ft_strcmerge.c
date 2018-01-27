@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/27 17:06:06 by azybert           #+#    #+#             */
-/*   Updated: 2017/12/04 05:08:00 by azybert          ###   ########.fr       */
+/*   Updated: 2018/01/28 00:19:50 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strcmerge(char **to_merge, char c)
 	length = 0;
 	while (to_merge[++loop] != NULL)
 		length += ft_strlen(to_merge[loop]);
-	length += loop;
+	length += loop - 1;
 	if ((new_str = (char *)malloc(sizeof(char) * (length + 1))) == NULL)
 		return (NULL);
 	new_str[length] = '\0';

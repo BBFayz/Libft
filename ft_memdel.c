@@ -6,11 +6,11 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 13:46:18 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/27 20:11:26 by azybert          ###   ########.fr       */
+/*   Updated: 2018/01/27 22:11:26 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_memdel(void **ap)
 {
