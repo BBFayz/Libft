@@ -6,13 +6,13 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/21 16:46:36 by azybert           #+#    #+#             */
-/*   Updated: 2018/02/04 00:02:16 by azybert          ###   ########.fr       */
+/*   Updated: 2018/02/16 17:47:07 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-static int	*ft_strsplit3(char **tab, char const *s, char c)
+static char	**ft_strsplit3(char **tab, char const *s, char c)
 {
 	int		l;
 	size_t	size;
@@ -26,13 +26,17 @@ static int	*ft_strsplit3(char **tab, char const *s, char c)
 		size = 0;
 		while (*(s + size) && *(s + size) != c)
 			size++;
-		if (!(tab[++l] = malloc(sizeof(char) * (size + 1))))
-			return (NULL);
-		strncpy(tab[l], s, size + 1);
-		tab[l][size + 1] = '\0';
-		s = s + size;
+		if (size != 0)
+		{
+			if (!(tab[++l] = malloc(sizeof(char) * (size + 1))))
+				return (NULL);
+			ft_strncpy(tab[l], s, size);
+			tab[l][size] = '\0';
+			s = s + size;
+		}
 	}
-	return (j);
+	tab[++l] = NULL;
+	return (tab);
 }
 
 static int	ft_strsplit2(char const *s, char c)
