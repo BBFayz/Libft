@@ -3,49 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nsehnoun <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/14 20:00:26 by azybert           #+#    #+#             */
-/*   Updated: 2017/01/29 12:51:58 by azybert          ###   ########.fr       */
+/*   Created: 2017/04/15 23:04:31 by nsehnoun          #+#    #+#             */
+/*   Updated: 2018/03/04 18:06:43 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-static unsigned int	ft_strlcat2(char *src)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	k;
-	char			*mem;
+	char		*str_dst;
+	const char	*str_src;
+	size_t		i;
+	size_t		dst_len;
 
-	mem = src;
-	k = 0;
-	while (*mem)
+	str_dst = dst;
+	str_src = src;
+	i = size;
+	while (i-- != 0 && *str_dst != '\0')
+		str_dst++;
+	dst_len = str_dst - dst;
+	i = size - dst_len;
+	if (i == 0)
+		return (dst_len + (ft_strlen(str_src)));
+	while (*str_src)
 	{
-		k++;
-		mem++;
+		if (i != 1)
+		{
+			*str_dst++ = *str_src;
+			i--;
+		}
+		str_src++;
 	}
-	return (k);
-}
-
-size_t				ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t			i;
-	size_t			s1_end;
-	unsigned int	k;
-
-	if (size == 0)
-		return (size + ft_strlcat2((char *)src));
-	i = 0;
-	k = ft_strlcat2((char *)src);
-	while (dst[i] && i < size)
-		i++;
-	s1_end = i;
-	while (src[i - s1_end] && i < size - 1)
-	{
-		dst[i] = src[i - s1_end];
-		i++;
-	}
-	if (s1_end < size)
-		dst[i] = '\0';
-	return (s1_end + k);
+	*str_dst = '\0';
+	return (dst_len + (str_src - src));
 }

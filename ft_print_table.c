@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdel.c                                        :+:      :+:    :+:   */
+/*   ft_print_table.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
+/*   By: arohani <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/17 14:07:18 by azybert           #+#    #+#             */
-/*   Updated: 2018/07/19 05:43:36 by azybert          ###   ########.fr       */
+/*   Created: 2017/10/04 14:33:11 by arohani           #+#    #+#             */
+/*   Updated: 2018/07/20 01:40:49 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strdel(char **as)
+void	ft_print_table(char **tab)
 {
-	if (as)
-	{
-		free(*as);
-		*as = NULL;
-	}
+	int j;
+
+	if (tab == NULL)
+		return ;
+	j = 0;
+	while (tab[j])
+		ft_putendl(tab[j++]);
 }

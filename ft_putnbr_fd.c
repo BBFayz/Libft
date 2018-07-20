@@ -6,7 +6,7 @@
 /*   By: azybert <azybert@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 20:39:20 by azybert           #+#    #+#             */
-/*   Updated: 2017/12/04 03:02:17 by azybert          ###   ########.fr       */
+/*   Updated: 2018/03/07 17:13:26 by azybert          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void		ft_putnbr_fd(int n, int fd)
 	else
 		mem[i++] = '-';
 	tmp = -1;
-	while (n / 10 < tmp)
+	while (n / 10 <= tmp)
 		tmp *= 10;
 	while (tmp < 0)
 	{
